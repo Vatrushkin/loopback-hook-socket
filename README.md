@@ -21,6 +21,7 @@ model:method
     "loopback-hook-socket" : {}
   }
   ```
+3. View explorer of socket events
 
 ## Configuration
 
