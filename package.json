@@ -1,0 +1,30 @@
+{
+  "name": "loopback-hook-socket",
+  "version": "0.0.1",
+  "description": "Receive response from Loopback REST API over socket.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "cd public && webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Vatrushkin/loopback-hook-socket.git"
+  },
+  "keywords": [
+    "Loopback.io",
+    "Socket.io",
+    "REST API"
+  ],
+  "author": "Vatrushkin Vladislav",
+  "license": "MIT",
+  "dependencies": {
+    "change-case": "^2.3.1",
+    "consolidate": "^0.14.0",
+    "lodash": "^4.0.0",
+    "request": "^2.69.0",
+    "socket.io": "^1.4.4",
+    "swig": "^1.4.2",
+    "underscore": "^1.8.3"
+  }
+}

@@ -1,0 +1,139 @@
+.header {
+  background-color: #344cab;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  margin-bottom: 50px;
+  -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.header h1 {
+  margin: 15px;
+  margin-left: -15px;
+}
+
+.header-content {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  margin: 0 auto;
+  font-family: sans-serif;
+  margin-top: 100px;
+}
+
+.event-container {
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: #e7f0f7;
+  border: 1px solid #c3d9ec;
+  padding: 0 20px;
+}
+
+.event-name-description {
+  display: flex;
+  clear: both;
+  border-bottom: 1px solid #c3d9ec;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.event-name {
+  font-style: italic;
+}
+
+.event-description {
+  color: #0f6ab4;
+  font-size: 13px;
+}
+
+.event-accepts {
+  clear: both;
+  margin-top: 10px;
+  display: none;
+  margin-bottom: 20px;
+}
+
+.event-accepts-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.event-accepts-table th {
+  color: #666666;
+  font-size: 12px;
+  font-weight: normal;
+  padding: 5px;
+  text-align: left;
+  border-bottom: 1px solid #999999;
+}
+
+.event-accepts-table td {
+  text-align: left;
+  padding: 10px 5px 5px 5px;
+  font-size: 12px;
+  font-weight: normal;
+  vertical-align: top;
+  border-bottom: 1px solid #cccccc;
+}
+
+.event-accepts-table tr:last-child > td {
+  border: none;
+}
+
+.event-accepts-table td:nth-child(2), .event-accepts-table td:nth-child(4) {
+  width: 35%;
+}
+
+.event-accepts-table td:nth-child(1), .event-accepts-table td:nth-child(3) {
+  width: 15%;
+}
+
+.parameter {
+  display: block;
+  margin-left: 20px;
+}
+
+.parameter:first-child {
+  margin-top: 5px;
+}
+
+.parameter:last-child {
+  margin-bottom: 5px;
+}
+
+.optional-parameter {
+  font-style: italic;
+}
+
+.link-container {
+  align-self: flex-end;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.link-container > a {
+  margin-left: 10px;
+  color: #666;
+  text-decoration: none;
+}
+
+.link-container > a:hover, .link-container > a:visited, .link-container > a:active {
+  color: #666;
+  text-decoration: none;
+}
+

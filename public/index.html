@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SocketHook Events Explorer</title>
+  <link href="/css/index.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="header">
+  <div class="header-content"><h1>SocketHook Events Explorer</h1></div>
+</div>
+<div class="content">
+  <div class="link-container">
+    <a href="#" class="show-all">Show all</a>
+    <a href="#" class="hide-all">Hide all</a>
+  </div>
+  {% for event in events %}
+  <div class="event-container">
+    <div class="event-name-description">
+      <div class="event-name">{{event.event}}</div>
+      <div class="event-description">{{event.description}}</div>
+    </div>
+    {% if event.accepts.length > 0 %}
+    <div class="event-accepts">
+      <table class="event-accepts-table">
+        <thead>
+        <tr>
+          <th>Parameter</th>
+          <th>Description</th>
+          <th>Parameter type</th>
+          <th>Data type</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for accept in event.accepts %}
+        <tr>
+          <td>{{ accept.name }}</td>
+          <td>{{ accept.description}}</td>
+          <td>{{ accept.in }}</td>
+          <td>
+            {% if accept.schema %}
+            {{ accept.modelName }} {
+            {% for modelParam in accept.modelParams %}
+            <span class="parameter">
+            <strong>{{loop.key}}</strong> (
+              {% if modelParam.format %}
+                {{modelParam.format}}
+              {%else%}
+               {{modelParam.type}}
+              {%endif%}
+              {%if not modelParam.required%}, <span class="optional-parameter">optional</span>
+              {%endif%})</span>
+            {% endfor %}
+            }
+            {% else %}
+            {{ accept.type }}
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>
+</body>
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>
+</html>
