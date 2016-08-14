@@ -1,6 +1,6 @@
 {
   "name": "loopback-hook-socket",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Receive response from Loopback REST API over socket.io",
   "main": "index.js",
   "scripts": {
