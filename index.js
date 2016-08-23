@@ -19,13 +19,13 @@ function LoopbackHookSocket(loopbackApplication, options) {
 
 function start(loopbackApplication, options) {
   if (options.eventView) {
-    loopbackApplication.engine('html', cons.swig);
-    loopbackApplication.set('view engine', 'html');
-    loopbackApplication.set('views', STATIC_ROOT);
-    loopbackApplication.use(loopbackApplication.loopback.static(STATIC_ROOT));
     loopbackApplication.use(options.mountPath, function (req, res, next) {
+      loopbackApplication.engine('html', cons.swig);
+      loopbackApplication.set('view engine', 'html');
+      loopbackApplication.set('views', STATIC_ROOT);
+      loopbackApplication.use(loopbackApplication.loopback.static(STATIC_ROOT));
       var events = SocketHook.formatRoutes(loopbackApplication);
-      res.render('index', {events: events});
+      res.render('index.html', {events: events});
     });
   }
 
